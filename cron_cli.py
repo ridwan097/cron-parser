@@ -24,7 +24,10 @@ def expand_cron_field(field_expression, field_name):
             start, end = map(int, part.split('-'))
             values.update(range(start, end + 1))
         else:
-            values.add(int(part))
+            part_value = int(part)
+            if part_value not in valid_range:
+                raise ValueError(f"{part_value} is out of range for {field_name}")
+            values.add(part_value)
 
     return sorted(values)
 
@@ -32,7 +35,7 @@ def expand_cron_field(field_expression, field_name):
 def parse_cron(value):
     fields = value.split()
     if len(fields)!= 6:
-        sys.exit("Invalid cron format. Expected 6 fields: minute hour day_of_month month day_of_week command")
+        raise ValueError("Invalid cron format. Expected 6 fields: minute hour day_of_month month day_of_week command")
     
     minute, hour, day_of_month, month, day_of_week = fields[:5]
     
