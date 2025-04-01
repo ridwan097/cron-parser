@@ -38,9 +38,23 @@ The output should be:
 | day of week  | 1 2 3 4 5                  |
 | command      | /usr/bin/find              |
 
+## Running Tests
+
+Unit tests are written using Python's built-in `unittest` module.
+
+### Run tests with Python
+
+```bash
+python -m unittest tests.py
+```
+
 ## Prerequisites
 
 Ensure you have one of the following installed:
 
 - [OrbStack](https://orbstack.dev/) (Recommended for macOS users)
 - [Docker](https://www.docker.com/) (Available on all platforms)
+
+```
+
+```
