@@ -37,3 +37,10 @@ The output should be:
 | month        | 1 2 3 4 5 6 7 8 9 10 11 12 |
 | day of week  | 1 2 3 4 5                  |
 | command      | /usr/bin/find              |
+
+## Prerequisites
+
+Ensure you have one of the following installed:
+
+- [OrbStack](https://orbstack.dev/) (Recommended for macOS users)
+- [Docker](https://www.docker.com/) (Available on all platforms)
