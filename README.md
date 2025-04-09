@@ -45,7 +45,7 @@ Unit tests are written using Python's built-in `unittest` module.
 ### Run tests with Python
 
 ```bash
-python -m unittest tests.py
+python -m unittest tests/tests.py
 ```
 
 ## Prerequisites
